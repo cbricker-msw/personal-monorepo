@@ -9,7 +9,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/firebase-sandbox",
             "index": "apps/firebase-sandbox/src/index.html",
@@ -21,7 +23,9 @@
               "apps/firebase-sandbox/src/favicon.ico",
               "apps/firebase-sandbox/src/assets"
             ],
-            "styles": ["apps/firebase-sandbox/src/styles.scss"],
+            "styles": [
+              "apps/firebase-sandbox/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -86,9 +90,11 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/firebase-sandbox"],
+          "outputs": [
+            "{workspaceRoot}/coverage/apps/firebase-sandbox"
+          ],
           "options": {
-            "jestConfig": "apps/firebase-sandbox/jest.config.js",
+            "jestConfig": "apps/firebase-sandbox/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -114,14 +120,20 @@
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/firebase-sandbox-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/firebase-sandbox-e2e/**/*.{js,ts}"
+            ]
           }
         }
       },
       "tags": [],
-      "implicitDependencies": ["firebase-sandbox"]
+      "implicitDependencies": [
+        "firebase-sandbox"
+      ]
     },
     "shared-data-access": {
       "projectType": "library",
@@ -131,9 +143,11 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/data-access"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/shared/data-access"
+          ],
           "options": {
-            "jestConfig": "libs/shared/data-access/jest.config.js",
+            "jestConfig": "libs/shared/data-access/jest.config.ts",
             "passWithNoTests": true
           }
         },
